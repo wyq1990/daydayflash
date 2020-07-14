@@ -1,17 +1,19 @@
 package api
 
 import (
-	// "giligili/api/fresh"
-	"giligili/service"
+	"fmt"
+	"giligili/service/fresh"
 
 	"github.com/gin-gonic/gin"
 )
 
-// ListMovie 视频列表接口
-func ListMovie(c *gin.Context) {
-	// fresh.GetName("123")
+func GetName(name string) {
+	fmt.Printf(name)
+}
 
-	service := service.ListMovieService{}
+// ListMovie 视频列表接口
+func ListGoods(c *gin.Context) {
+	service := fresh.ListGoodsService{}
 	if err := c.ShouldBind(&service); err == nil {
 		res := service.List()
 		c.JSON(200, res)

@@ -50,6 +50,8 @@ func NewRouter() *gin.Engine {
 
 		// 电影操作
 		v1.GET("movies", api.ListMovie)
+
+		v1.GET("goods", api.ListGoods)
 	}
 
 	// swagger文档

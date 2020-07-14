@@ -4,9 +4,9 @@ import "giligili/model"
 
 // Movie 视频序列化器
 type Movie struct {
-	ID        uint   `json:"id"`
-	CreatedAt int64  `json:"created_at"`
-	DoubanId     int `json:"doubanId"`
+	ID           uint   `json:"id"`
+	CreatedAt    int64  `json:"created_at"`
+	DoubanId     int    `json:"doubanId"`
 	MovieName    string `json:"movieName"`
 	MovieContent string `json:"movieContent"`
 	MovieImg     string `json:"movieImg"`
@@ -15,12 +15,12 @@ type Movie struct {
 // BuildMovie 序列化电影
 func BuildMovie(item model.Movie) Movie {
 	return Movie{
-		ID:        item.ID,
-		DoubanId: item.DoubanId,
-		MovieName: item.MovieName,
-		MovieImg: item.MovieImg,
+		ID:           item.ID,
+		DoubanId:     item.DoubanId,
+		MovieName:    item.MovieName,
+		MovieImg:     item.MovieImg,
 		MovieContent: item.MovieContent,
-		CreatedAt: item.CreatedAt.Unix(),
+		CreatedAt:    item.CreatedAt.Unix(),
 	}
 }
 

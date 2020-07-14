@@ -26,6 +26,7 @@ type Goods struct {
 	GoodsId    uint16
 	CreateTime string
 	UpdateTime string
+	Status     uint8
 	Name       string
 	Content    string
 }
