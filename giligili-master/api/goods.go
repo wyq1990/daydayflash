@@ -21,3 +21,13 @@ func ListGoods(c *gin.Context) {
 		c.JSON(200, ErrorResponse(err))
 	}
 }
+
+// func GetGoodsType(c *gin.Context)  {
+// 	service := fresh.ListGoodsService{}
+// 	if err := c.ShouldBind(&service); err == nil {
+// 		res := service.List()
+// 		c.JSON(200, res)
+// 	} else {
+// 		c.JSON(200, ErrorResponse(err))
+// 	}
+// }

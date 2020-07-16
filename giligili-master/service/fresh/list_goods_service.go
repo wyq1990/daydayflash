@@ -11,6 +11,8 @@ type ListGoodsService struct {
 	Start int `form:"start"`
 }
 
+
+
 // List 视频列表
 func (service *ListGoodsService) List() serializer.Response {
 	goods := []model.Goods{}

@@ -10,14 +10,16 @@ type GoodsSKU struct {
 	UpdateTime string
 	Name       string
 	Content    string
-	Price      uint64
+	Price      float64
+	GoodsPrice float32
+	State      uint8
 	Unite      string
 	Image      string
 	Stock      uint64
 	Sales      string
 	Status     uint8
-	Goods      Goods
-	GoodsType  GoodsType
+	GoodsID      uint
+	GoodsTypeID  uint
 }
 
 // Goods 商品spu
@@ -29,6 +31,7 @@ type Goods struct {
 	Status     uint8
 	Name       string
 	Content    string
+	GoodsSKU	GoodsSKU
 }
 
 // GoodsType 商品类型
@@ -37,7 +40,9 @@ type GoodsType struct {
 	GoodsId    uint16
 	CreateTime string
 	UpdateTime string
+	State      uint8
 	Name       string
 	Logo       string
 	Image      string
+	GoodsSKU	GoodsSKU
 }
